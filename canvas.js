@@ -23,7 +23,7 @@ function drawnSun(){
         paintTheSky();
         context.fillStyle = "#C4C4C4";
         context.fill();
-
+        
     }
     if(sunX > 330){
         sunX = -10;
@@ -93,10 +93,10 @@ function drawnSun(){
 
     //Här börjar yttedörren
     context.fillStyle = "#7C4400";
-    context.fillRect(105, 60, 30, 70);
+    context.fillRect(120, 60, 30, 70);
 
     context.beginPath();
-    context.arc(110, 100, 2, 0, 2 * Math.PI);
+    context.arc(125, 100, 2, 0, 2 * Math.PI);
     context.fillStyle = "#613500";
     context.fill();
     //Här slutar yttedörre
@@ -117,6 +117,9 @@ function drawnSun(){
 
     context.fillStyle = "#8D4D00";
     context.fillRect(90, 40, 58, 5);
+
+    let window = context.fillStyle = "#C6E0EE";
+    context.fillRect(82, 80, 30, 30);
 
 
     //Här slutar plankan mellan tak och vägg
@@ -139,6 +142,8 @@ function drawnSun(){
     context.restore();
     //Här slutar högra takpanelen
 
+    
+
     //Här böjrar trädet
     context.fillStyle = "#4F2C00";
     context.fillRect(240, 90, 12.5, 50)
@@ -152,7 +157,13 @@ function drawnSun(){
     context.fill(); 
     //Här slutar trädet
 
+    //Här börjar fönstret
+    context.fillStyle = "#8D4D00";
+    context.fillRect(94, 80, 4, 30);
 
+    context.fillStyle = "#8D4D00";
+    context.fillRect(82, 93, 30, 4);
+    //Här slutar fönstret
 }
 
 function paintTheSky(){
@@ -160,7 +171,12 @@ function paintTheSky(){
     context.fillRect(0, 0, 300, 100);
 }
 
-setInterval(drawnSun, 25);
+function paintTheWindow(){
+    window = context.fillStyle = "#FFC500";
+    context.fillRect();
+}
+
+setInterval(drawnSun, 20);
 
 
 
