@@ -20,7 +20,8 @@ function drawnSun(){
     sunX++;
 
     if(sunX > 120){
-        context.fillStyle = "#FF6800";
+        paintTheSky();
+        context.fillStyle = "#C4C4C4";
         context.fill();
 
     }
@@ -154,7 +155,12 @@ function drawnSun(){
 
 }
 
-setInterval(drawnSun, 20);
+function paintTheSky(){
+    sky = context.fillStyle = "#002B5D";
+    context.fillRect(0, 0, 300, 100);
+}
+
+setInterval(drawnSun, 25);
 
 
 
